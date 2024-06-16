@@ -1,0 +1,70 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Product 1",
+      "price": 1000,
+      "image": "Image 1",
+      "quality": 1,
+      "description": "Description 1"
+    },
+    {
+      "name": "oce",
+      "price": 0,
+      "quality": 0,
+      "image": "123",
+      "description": "www",
+      "id": "2"
+    },
+    {
+      "name": "oce2",
+      "price": 1,
+      "quality": 1,
+      "image": "sss",
+      "description": "mô tả 5\n",
+      "id": "3"
+    },
+    {
+      "name": "oce",
+      "price": 1,
+      "quality": 3,
+      "image": "123",
+      "description": "1234",
+      "id": "4"
+    },
+    {
+      "id": "db22",
+      "name": "fdfd",
+      "price": 4,
+      "quality": 5,
+      "image": "dfd",
+      "description": "no"
+    }
+  ],
+  "users": [
+    {
+      "email": "cong@fpt.edu.vn",
+      "password": "$2a$10$JyydTEyBMUWKIU.g.M8z1.F64FYXYSUSCeW36dlX1uILenWpzDL8i",
+      "confirmPassword": "123456",
+      "id": "1"
+    },
+    {
+      "email": "cong1@fpt.edu.vn",
+      "password": "$2a$10$glhkI1XNrt7eDFESNILzF.K.nKYobM55eM1Z2V41mPj.moq2TFyCy",
+      "confirmPassword": "123456",
+      "id": "2"
+    },
+    {
+      "email": "cong2@fpt.edu.vn",
+      "password": "$2a$10$G8Gdw5trxFO9MfZypoahmuRW.70SwUcc3wlvUaueqY.CYUgaxa9Em",
+      "confirmPassword": "123456",
+      "id": "3"
+    },
+    {
+      "email": "cong4@fpt.edu.vn",
+      "password": "$2a$10$hMHWFeqBWPyIIGMfXfwr6.8GWcInF6/gVXcC63x.xGdvQygHlCZqS",
+      "confirmPassword": "123456",
+      "id": "4"
+    }
+  ]
+}

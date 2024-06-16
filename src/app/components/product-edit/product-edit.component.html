@@ -1,0 +1,45 @@
+<div class="py-8 px-4">
+  <h2 class="mb-4 text-xl">Edit product</h2>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div>
+      <div>
+        <label for="name" class="block">Product Name</label>
+        <input formControlName="name" type="text" name="name" id="name" class="border mb-3">
+        <div *ngIf="!form.get('name')?.valid && (form.get('name')?.touched || form.get('name')?.dirty)">
+          <span *ngIf="form.get('name')?.hasError('required')">Nhập tên</span>
+          <span *ngIf="form.get('name')?.hasError('minlength')">Tối thiểu 3 ký tự</span>
+        </div>
+      </div>
+      <div>
+        <label for="image" class="mt-2">Image</label>
+        <input formControlName="image" type="text" name="image" id="image" class="block border" placeholder="Type product name" required="">
+        <div *ngIf="
+                  !form.get('image')?.valid && form.get('image')?.dirty || form.get('image')?.touched
+                  ">
+          <span *ngIf=" form.get('image')?.hasError('required')">Nhập ảnh</span>
+        </div>
+      </div>
+      <div class="w-full">
+        <label for="quality" class="block mb-2">Quality</label>
+        <input formControlName="quality" type="number" name="quality" id="quality" placeholder="Product brand" required="" class="border">
+        <div *ngIf="!form.get('quality')?.valid && form.get('quality')?.dirty || form.get('quality')?.touched">
+          <span *ngIf=" form.get('quality')?.hasError('required')">Nhập chất lượng</span>
+        </div>
+      </div>
+      <div class="w-full">
+        <label for="price">Price</label>
+        <input formControlName="price" type="number" name="price" id="price" class="block border" placeholder="$2999" required="">
+        <div *ngIf="!form.get('price')?.valid && form.get('price')?.dirty || form.get('price')?.touched">
+          <span *ngIf=" form.get('price')?.hasError('required')">Nhập giá</span>
+        </div>
+      </div>
+
+      <div>
+        <label for="description" class="block ">Description</label>
+        <textarea formControlName="description" id="description" rows="8" class="block border" placeholder="Your description here"></textarea>
+
+      </div>
+    </div>
+    <button type="submit" class=" bg-blue-500 mt-6">Edit product</button>
+  </form>
+</div>

@@ -1,0 +1,37 @@
+<div class="flex-col px-6 py-12 ">
+    <div class= "mb-5">
+      <h2>Sign in</h2>
+    </div>
+
+    <div>
+        <form class="space-y-6" [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div>
+                <label for="email">Email address</label>
+                <div class="mt-2">
+                    <input formControlName="email" id="email" name="email" type="email" autocomplete="email" required class="border">
+                    <div *ngIf="!form.get('email')?.valid && form.get('email')?.dirty || form.get('email')?.touched">
+                        <span *ngIf=" form.get('email')?.hasError('required')">Nhập email</span>
+                        <span *ngIf=" form.get('email')?.hasError('email')">Cần nhập kiểu email</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <label for="password">Password</label>
+                </div>
+                <div class="mt-2">
+                    <input formControlName="password" id="password" name="password" type="password" autocomplete="current-password" required class="border">
+                    <div *ngIf="!form.get('password')?.valid && form.get('password')?.dirty || form.get('password')?.touched">
+                        <span *ngIf=" form.get('password')?.hasError('required')">Nhập password</span>
+                        <span *ngIf=" form.get('password')?.hasError('minlength')">Password tối thiểu 6 ký tự</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <button type="submit" class="bg-blue-400">Sign in</button>
+            </div>
+        </form>
+    </div>
+</div>
